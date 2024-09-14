@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import axios from 'axios';
+import MCQQuestion from './MCQQuestion';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
+  const [questions, setQuestions] = useState<any[]>([]);
+  const [file, setFile] = useState<File | null>(null);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files) {
+      setFile(event.target.files[0]);
+    }
+  };
+
+  const handleUpload = async () => {
+    if (!file) return;
+    const formData = new FormData();
+    formData.append('pdf', file);
+
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/upload`, formData, {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      });
+      setQuestions(response.data);
+    } catch (error) {
+      console.error('Error uploading file:', error);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>MCQ Application</h1>
+      <input type="file" onChange={handleFileChange} accept=".pdf" />
+      <button onClick={handleUpload}>Upload PDF</button>
+
+      <div className="question-list">
+        {questions.length > 0 &&
+          questions.map((mcq, index) => (
+            <MCQQuestion key={index} mcq={mcq} />
+          ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
