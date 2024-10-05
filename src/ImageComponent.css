@@ -1,0 +1,15 @@
+.image-container {
+    width: 100%; /* or any specific width */
+    height: 100%; /* or any specific height */
+    overflow: hidden; /* This will help with image overflow */
+    display: flex; /* Optional: helps center the image */
+    justify-content: center; /* Optional: center horizontally */
+    align-items: center; /* Optional: center vertically */
+  }
+  
+  .responsive-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* This will crop the image to fit the container */
+  }
+  

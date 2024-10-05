@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './MCQQuestion.css';
+import ImageComponent from './ImageContainer';
 
 interface MCQQuestionProps {
   mcq: {
     questionNo?: string;
     question: string;
+    questionImage?: string;
     options: {
       A?: string;
       B?: string;
@@ -12,7 +14,9 @@ interface MCQQuestionProps {
       D?: string;
     };
     answer: string;
+    answerImage?: string;
     explanation?: string;
+    explanationImage?: string;
   };
 }
 
@@ -23,11 +27,12 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq }) => {
     setShowAnswer(!showAnswer);
   };
 
-    console.table(mcq);
+  console.table(mcq);
   return (
     <div className="mcq-question">
       {mcq.questionNo && <h3>Question No: {mcq.questionNo}</h3>}
       <p className="question-text">{mcq.question}</p>
+      {mcq.questionImage && <ImageComponent src={require(`../images/${mcq.questionImage}.png`)} />}
       <div className="options">
         {mcq.options.A && <p><strong>A.</strong> {mcq.options.A}</p>}
         {mcq.options.B && <p><strong>B.</strong> {mcq.options.B}</p>}
@@ -37,7 +42,11 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq }) => {
       {showAnswer && (
         <div className="answer-section">
           <p><strong>Answer:</strong> {mcq.answer}</p>
-          {mcq.explanation && <p><strong>Explanation:</strong> {mcq.explanation}</p>}
+          {mcq.answerImage && <ImageComponent src={require(`../images/${mcq.answerImage}.png`)} />}
+          <strong>Explanation:</strong>
+          {mcq.explanation && <p> {mcq.explanation}</p>}
+          {mcq.explanationImage && <ImageComponent src={require(`../images/${mcq.explanationImage}.png`)} />}
+
         </div>
       )}
       <button onClick={toggleShowAnswer} className="show-answer-btn">

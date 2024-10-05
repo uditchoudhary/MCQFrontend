@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import MCQQuestion from './MCQQuestion';
 import './App.css';
+import PMPquestions from './PMP.json';
 
 const App: React.FC = () => {
-  const [questions, setQuestions] = useState<any[]>([]);
+  const [questions, setQuestions] = useState<any[]>(PMPquestions);
   const [file, setFile] = useState<File | null>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
