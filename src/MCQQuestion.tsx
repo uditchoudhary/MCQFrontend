@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './MCQQuestion.css';
 import ImageComponent from './ImageContainer';
+import OptionComponent from './OptionComponent';
 
 interface MCQQuestionProps {
   mcq: {
@@ -34,10 +35,10 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq }) => {
       <p className="question-text">{mcq.question}</p>
       {mcq.questionImage && <ImageComponent src={require(`../images/${mcq.questionImage}.png`)} />}
       <div className="options">
-        {mcq.options.A && <p><strong>A.</strong> {mcq.options.A}</p>}
-        {mcq.options.B && <p><strong>B.</strong> {mcq.options.B}</p>}
-        {mcq.options.C && <p><strong>C.</strong> {mcq.options.C}</p>}
-        {mcq.options.D && <p><strong>D.</strong> {mcq.options.D}</p>}
+        {mcq.options.A && <OptionComponent answer={mcq.answer} option={mcq.options.A} index="A"/>}
+        {mcq.options.B && <OptionComponent answer={mcq.answer} option={mcq.options.B} index="B"/>}
+        {mcq.options.C && <OptionComponent answer={mcq.answer} option={mcq.options.C} index="C"/>}
+        {mcq.options.D && <OptionComponent answer={mcq.answer} option={mcq.options.D} index="D"/>}
       </div>
       {showAnswer && (
         <div className="answer-section">
