@@ -1,46 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface OptionComponentProps {
   answer: string;
   option: string;
   index: string;
   onSelect: (option: string) => void;
+  isChecked: boolean;
+  type: string; // 'checkbox' or 'radio'
 }
 
-const OptionComponent: React.FC<OptionComponentProps> = ({ answer, option, index, onSelect }) => {
-  const [isChecked, setIsChecked] = useState<boolean>(false);
-
-  const checkCondition = (): boolean => {
-    return answer.split(",").length > 1;
-  };
+const OptionComponent: React.FC<OptionComponentProps> = ({ answer, option, index, onSelect, isChecked, type }) => {
 
   const handleClick = () => {
-    const newChecked = !isChecked;
-    setIsChecked(newChecked);
-    onSelect(index); // Pass the option index to the parent component
+    onSelect(index);
   };
 
   return (
     <div>
-      {checkCondition() ? (
-        <label>
-          <input
-            type="checkbox"
-            checked={isChecked}
-            onChange={handleClick}
-          />
-          <strong>{index}</strong> - {option}
-        </label>
-      ) : (
-        <label>
-          <input
-            type="radio"
-            checked={isChecked}
-            onChange={handleClick}
-          />
-          <strong>{index}</strong> - {option}
-        </label>
-      )}
+      <label>
+        <input
+          type={type}
+          checked={isChecked}
+          onChange={handleClick}
+        />
+        <strong>{index}</strong> - {option}
+      </label>
     </div>
   );
 };

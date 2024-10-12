@@ -21,16 +21,26 @@ interface MCQQuestionProps {
   };
   onSelect: (selected: string[]) => void;
   isCorrect?: boolean;
+  selectedOptions: string[];
 }
 
-const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect }) => {
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect, selectedOptions }) => {
+  const [localSelectedOptions, setLocalSelectedOptions] = useState<string[]>(selectedOptions);
   const [showAnswer, setShowAnswer] = useState(false);
 
+  useEffect(() => {
+    setLocalSelectedOptions(selectedOptions);
+  }, [selectedOptions]);
+
   const toggleOption = (option: string) => {
-    setSelectedOptions((prev) => {
-      const updatedOptions = prev.includes(option) ? prev.filter((o) => o !== option) : [...prev, option];
-      onSelect(updatedOptions); // Ensure options are passed after updating
+    setLocalSelectedOptions((prev) => {
+      let updatedOptions: string[];
+      if (mcq.answer.includes(',')) {
+        updatedOptions = prev.includes(option) ? prev.filter((o) => o !== option) : [...prev, option]; // Checkbox behavior
+      } else {
+        updatedOptions = prev.includes(option) ? [] : [option];  // Radio behavior
+      }
+      onSelect(updatedOptions);
       return updatedOptions;
     });
   };
@@ -39,9 +49,7 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect }) =
     setShowAnswer(!showAnswer);
   };
 
-  useEffect(() => {
-    onSelect(selectedOptions); // Ensure onSelect is called whenever selectedOptions changes
-  }, [selectedOptions, onSelect]);
+  const isMultipleAnswer = mcq.answer.includes(',');
 
   return (
     <div className={`mcq-question ${isCorrect === false ? 'incorrect' : isCorrect === true ? 'correct' : ''}`}>
@@ -55,6 +63,8 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect }) =
             option={mcq.options.A}
             index="A"
             onSelect={toggleOption}
+            isChecked={localSelectedOptions.includes("A")}
+            type={isMultipleAnswer ? "checkbox" : "radio"}
           />
         )}
         {mcq.options.B && (
@@ -63,6 +73,8 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect }) =
             option={mcq.options.B}
             index="B"
             onSelect={toggleOption}
+            isChecked={localSelectedOptions.includes("B")}
+            type={isMultipleAnswer ? "checkbox" : "radio"}
           />
         )}
         {mcq.options.C && (
@@ -71,6 +83,8 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect }) =
             option={mcq.options.C}
             index="C"
             onSelect={toggleOption}
+            isChecked={localSelectedOptions.includes("C")}
+            type={isMultipleAnswer ? "checkbox" : "radio"}
           />
         )}
         {mcq.options.D && (
@@ -79,6 +93,8 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect }) =
             option={mcq.options.D}
             index="D"
             onSelect={toggleOption}
+            isChecked={localSelectedOptions.includes("D")}
+            type={isMultipleAnswer ? "checkbox" : "radio"}
           />
         )}
       </div>
