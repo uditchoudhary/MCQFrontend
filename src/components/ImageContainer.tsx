@@ -1,5 +1,6 @@
+// ImageContainer.tsx
 import React from 'react';
-import './ImageComponent.css';
+import '../css/ImageComponent.css';
 
 interface ImageComponentProps {
   src: string;
