@@ -1,44 +1,42 @@
 import React, { useState } from 'react';
 
-// Define the interface for props
 interface OptionComponentProps {
   answer: string;
   option: string;
   index: string;
-  onSelect: (option: string) => void; // Add the onSelect prop
-  
+  onSelect: (option: string) => void;
 }
 
 const OptionComponent: React.FC<OptionComponentProps> = ({ answer, option, index, onSelect }) => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
-  // Function that checks if there are multiple answers (comma-separated)
   const checkCondition = (): boolean => {
     return answer.split(",").length > 1;
   };
 
   const handleClick = () => {
-    setIsChecked(!isChecked);
-    onSelect(option); // Call the onSelect function when the option is clicked
+    const newChecked = !isChecked;
+    setIsChecked(newChecked);
+    onSelect(index); // Pass the option index to the parent component
   };
 
   return (
     <div>
       {checkCondition() ? (
         <label>
-          <input 
-            type="checkbox" 
-            checked={isChecked} 
-            onClick={handleClick} 
+          <input
+            type="checkbox"
+            checked={isChecked}
+            onChange={handleClick}
           />
           <strong>{index}</strong> - {option}
         </label>
       ) : (
         <label>
-          <input 
-            type="radio" 
-            checked={isChecked} 
-            onClick={handleClick} 
+          <input
+            type="radio"
+            checked={isChecked}
+            onChange={handleClick}
           />
           <strong>{index}</strong> - {option}
         </label>

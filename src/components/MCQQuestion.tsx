@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/MCQQuestion.css';
 import ImageComponent from './ImageContainer';
 import OptionComponent from './OptionComponent';
@@ -19,8 +19,8 @@ interface MCQQuestionProps {
     explanation?: string;
     explanationImage?: string;
   };
-  onSelect: (selected: string[]) => void; // Pass selected options to the parent
-  isCorrect?: boolean; // Optional prop to handle correctness
+  onSelect: (selected: string[]) => void;
+  isCorrect?: boolean;
 }
 
 const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect }) => {
@@ -29,71 +29,65 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect }) =
 
   const toggleOption = (option: string) => {
     setSelectedOptions((prev) => {
-      if (prev.includes(option)) {
-        return prev.filter((o) => o !== option);
-      } else {
-        return [option];
-      }
+      const updatedOptions = prev.includes(option) ? prev.filter((o) => o !== option) : [...prev, option];
+      onSelect(updatedOptions); // Ensure options are passed after updating
+      return updatedOptions;
     });
-    onSelect(selectedOptions); // Pass selected options to parent
   };
 
   const toggleShowAnswer = () => {
     setShowAnswer(!showAnswer);
   };
 
+  useEffect(() => {
+    onSelect(selectedOptions); // Ensure onSelect is called whenever selectedOptions changes
+  }, [selectedOptions, onSelect]);
+
   return (
     <div className={`mcq-question ${isCorrect === false ? 'incorrect' : isCorrect === true ? 'correct' : ''}`}>
       {mcq.questionNo && <h3>Question No: {mcq.questionNo}</h3>}
       <p className="question-text">{mcq.question}</p>
-      {mcq.questionImage && (
-        <ImageComponent src={require(`../../images/${mcq.questionImage}.png`)} />
-      )}
+      {mcq.questionImage && <ImageComponent src={require(`../../images/${mcq.questionImage}.png`)} />}
       <div className="options">
         {mcq.options.A && (
-          <OptionComponent 
-            answer={mcq.answer} 
-            option={mcq.options.A} 
-            index="A" 
-            onSelect={toggleOption} // Pass onSelect to OptionComponent
+          <OptionComponent
+            answer={mcq.answer}
+            option={mcq.options.A}
+            index="A"
+            onSelect={toggleOption}
           />
         )}
         {mcq.options.B && (
-          <OptionComponent 
-            answer={mcq.answer} 
-            option={mcq.options.B} 
-            index="B" 
-            onSelect={toggleOption} // Pass onSelect to OptionComponent
+          <OptionComponent
+            answer={mcq.answer}
+            option={mcq.options.B}
+            index="B"
+            onSelect={toggleOption}
           />
         )}
         {mcq.options.C && (
-          <OptionComponent 
-            answer={mcq.answer} 
-            option={mcq.options.C} 
-            index="C" 
-            onSelect={toggleOption} // Pass onSelect to OptionComponent
+          <OptionComponent
+            answer={mcq.answer}
+            option={mcq.options.C}
+            index="C"
+            onSelect={toggleOption}
           />
         )}
         {mcq.options.D && (
-          <OptionComponent 
-            answer={mcq.answer} 
-            option={mcq.options.D} 
-            index="D" 
-            onSelect={toggleOption} // Pass onSelect to OptionComponent
+          <OptionComponent
+            answer={mcq.answer}
+            option={mcq.options.D}
+            index="D"
+            onSelect={toggleOption}
           />
         )}
       </div>
       {showAnswer && (
         <div className="answer-section">
           <p><strong>Answer:</strong> {mcq.answer}</p>
-          {mcq.answerImage && (
-            <ImageComponent src={require(`../../images/${mcq.answerImage}.png`)} />
-          )} 
-          <strong>Explanation:</strong>
+          {mcq.answerImage && <ImageComponent src={require(`../../images/${mcq.answerImage}.png`)} />}
           {mcq.explanation && <p>{mcq.explanation}</p>}
-          {mcq.explanationImage && (
-            <ImageComponent src={require(`../../images/${mcq.explanationImage}.png`)} />
-          )}
+          {mcq.explanationImage && <ImageComponent src={require(`../../images/${mcq.explanationImage}.png`)} />}
         </div>
       )}
       <button onClick={toggleShowAnswer} className="show-answer-btn">

@@ -7,26 +7,26 @@
     max-width: 600px;
     background-color: #f9f9f9;
     text-align: left;
-}
-
-.question-text {
+  }
+  
+  .question-text {
     font-size: 18px;
     margin-bottom: 15px;
-}
-
-.options p {
+  }
+  
+  .options p {
     margin: 5px 0;
-}
-
-.answer-section {
+  }
+  
+  .answer-section {
     background-color: #e6f7ff;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #b3e0ff;
     border-radius: 8px;
-}
-
-.show-answer-btn {
+  }
+  
+  .show-answer-btn {
     background-color: #28a745;
     margin-top: 10px;
     color: white;
@@ -34,22 +34,23 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
-}
-
-.show-answer-btn:hover {
+  }
+  
+  .show-answer-btn:hover {
     background-color: #218838;
-}
-
-@media (max-width: 600px) {
+  }
+  
+  @media (max-width: 600px) {
     .mcq-question {
-        width: 90%;
+      width: 90%;
     }
-
+  
     .question-text {
-        font-size: 16px;
+      font-size: 16px;
     }
-
+  
     .show-answer-btn {
-        width: 100%;
+      width: 100%;
     }
-}
+  }
+  
