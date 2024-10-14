@@ -142,7 +142,7 @@
             "A": " Ask the team member to learn the new system as on-the-job training.  ",
             "B": " Issue a change request to extend the project schedule.  ",
             "C": " Escalate the team member's performance to the project sponsor.  ",
-            "D": "  Assign an experienced resource to support the team member.    "
+            "D": " Assign an experienced resource to support the team member.    "
         },
         "answer": "A",
         "answerImage": null,
@@ -169,7 +169,7 @@
         "question": "12   A project manager is managing a construction project that is facing challenges. There is schedule overrun, cost overrun, and the client is unhappy with the specific scope progress.   What should the project manager do first?       ",
         "questionImage": null,
         "options": {
-            "A": "  Review the scope and project objectives.  ",
+            "A": " Review the scope and project objectives.  ",
             "B": " Enforce the penalty clause on the supplier.  ",
             "C": " Take action to reduce the cost overrun.  ",
             "D": " Work with the client on the scope completion.    "
@@ -364,7 +364,7 @@
         "question": "25   A project manager is leading a team of diverse individuals of all ages. The working hours for the project were set at the beginning of the project, and all team members agreed to the hours. However, later in the project, one of the team members informed the project manager that the previously agreed upon hours no longer work due to the team member’s personal commitments.   What should the project manager do?       ",
         "questionImage": null,
         "options": {
-            "A": "  Changed the duration of iterations to deliver more value  ",
+            "A": " Changed the duration of iterations to deliver more value  ",
             "B": " Validated the iteration goals with the customer  ",
             "C": " Invited the customer to the daily meetings  ",
             "D": " Helped the team redefine the MVP    "
@@ -589,7 +589,7 @@
         "question": "40   A project team is implementing a hosted system for a third party. Just before going live, the customer asks the project team to include additional functionality. The project team identified risks to the delivery date and informed the project manager that some of the requested functions are in conflict with the agreed scope.   What should the project manager do?       ",
         "questionImage": null,
         "options": {
-            "A": "  Discuss with the customer the risks identified and team's concerns  ",
+            "A": " Discuss with the customer the risks identified and team's concerns  ",
             "B": " Discuss with the team, estimate the effort, and raise a change request  ",
             "C": " Ask the customer to go live and add the new functionality in the backlog  ",
             "D": " Ask the team to deliver the functionality on the agreed go-live date    "
@@ -637,7 +637,7 @@
             "A": " Assess the risk of the contractor not attending meetings and submitting reports for the rest of the project and escalate it to the project sponsor  ",
             "B": " Remind the contractor that they committed to attending meetings and submitting reports per the contract  ",
             "C": " Submit a claim for not fulfilling the contract terms and handle the claim in accordance with the alternative dispute resolution  ",
-            "D": "  Speak with the company's lawyer and request that they demand the contractor fulfill their contractual commitments    "
+            "D": " Speak with the company's lawyer and request that they demand the contractor fulfill their contractual commitments    "
         },
         "answer": "B",
         "answerImage": null,
@@ -847,7 +847,8 @@
             "A": " Burndown chart  ",
             "B": " Product backlog burnup chart  ",
             "C": " Cumulative flow diagram of completed features  ",
-            "D": " Work breakdown structure (WBS)  E. Project schedule    "
+            "D": " Work breakdown structure (WBS) ",
+            "E": " Project schedule    "
         },
         "answer": "A,B",
         "answerImage": null,
@@ -937,7 +938,8 @@
             "A": " Provide training to the team on emotional intelligence and status reporting techniques  ",
             "B": " Promote an adaptive and transparent environment where the team can easily communicate with the stakeholders  ",
             "C": " Share weekly status reports with detailed information about the project and team performance  ",
-            "D": " Submit performance reports and task assignments to keep the stakeholder informed  E. Schedule regular meetings with the key stakeholder to provide updates and receive feedback    "
+            "D": " Submit performance reports and task assignments to keep the stakeholder informed ",
+            "E": " Schedule regular meetings with the key stakeholder to provide updates and receive feedback    "
         },
         "answer": "B,E",
         "answerImage": null,
@@ -952,7 +954,8 @@
             "A": " Prioritize stakeholders based on the project phase and need  ",
             "B": " Perform a stakeholder assessment to align with the project objectives  ",
             "C": " Classify and rank stakeholders based on their positions in the organization  ",
-            "D": " Include all stakeholders in the stakeholder engagement plan and provide the same level of communication  E. Develop a stakeholder impact/influence matrix to determine the level of engagement    "
+            "D": " Include all stakeholders in the stakeholder engagement plan and provide the same level of communication ",
+            "E": " Develop a stakeholder impact/influence matrix to determine the level of engagement    "
         },
         "answer": "A,B,E",
         "answerImage": null,
@@ -982,7 +985,8 @@
             "A": " Organize a team-bonding activity and invite an external manager to speak to the team.  ",
             "B": " Set a clear vision for the project and ensure it is visible to all stakeholders.  ",
             "C": " Focus on the resource management plan and track project progress.  ",
-            "D": " Encourage the team to do a brainstorming session and provide a mitigation plan.  E. Keep the team engaged and focused on the project's direction.    "
+            "D": " Encourage the team to do a brainstorming session and provide a mitigation plan. ",
+            "E": " Keep the team engaged and focused on the project's direction.    "
         },
         "answer": "B,E",
         "answerImage": null,
@@ -1012,7 +1016,7 @@
             "A": " Request additional contingency from the sponsor  ",
             "B": " Add more float to the overall project schedule  ",
             "C": " Expedite the next phase to reduce slippage  ",
-            "D": "  Organize a root cause analysis (RCA) workshop    "
+            "D": " Organize a root cause analysis (RCA) workshop    "
         },
         "answer": "D",
         "answerImage": null,
@@ -1084,7 +1088,7 @@
         "question": "73   Atypically high-performing team member has started to demonstrate a performance drop as well as some aggressive behaviors toward other team members in meetings. The project manager has worked with this individual for many months on this project and has not seen this type of behavior before.   What should the project manager do?       ",
         "questionImage": null,
         "options": {
-            "A": "  Discuss the individual's behavior with the other team members to determine if they have noticed and know what is going on  ",
+            "A": " Discuss the individual's behavior with the other team members to determine if they have noticed and know what is going on  ",
             "B": " Attend more team meetings to observe the team more closely to determine the root cause  ",
             "C": " Discuss the project manager's observations with the individual to determine why they are behaving this way  ",
             "D": " Discuss their performance with the team member's functional manager as well as human resources (HR) and discuss next steps    "
@@ -1716,7 +1720,7 @@
         "options": {
             "A": " Determine what the problem is and develop an action plan  ",
             "B": " Ask the team members to use chat tools as an alternative to calls  ",
-            "C": "  Procure tools that consume less bandwidth for internet calls  ",
+            "C": " Procure tools that consume less bandwidth for internet calls  ",
             "D": " Record the meeting to share with the team members who were unable to join    "
         },
         "answer": "A",
@@ -1792,7 +1796,7 @@
             "A": " Estimate the costs at the work package level and add those costs to calculate the total cost of the project and compare it to the allocated budget.  ",
             "B": " Create a budget burndown and a scope burnup and then verify that the project scope is completed before the allocated budget is depleted.  ",
             "C": " Divide the allocated budget by the number of work packages and verify that each work package can be completed within the allocated budget.  ",
-            "D": "  Fund each work package in the order of its importance and shift any remaining scope from non- funded work packages to funded work packages.    "
+            "D": " Fund each work package in the order of its importance and shift any remaining scope from non- funded work packages to funded work packages.    "
         },
         "answer": "D",
         "answerImage": null,
@@ -2121,7 +2125,7 @@
         "options": {
             "A": " Embed a feedback form into the system for users to respond  ",
             "B": " Build the functionality in the software to collect the operational usage data  ",
-            "C": "  Send out a questionnaire to all users regarding the most useful features  ",
+            "C": " Send out a questionnaire to all users regarding the most useful features  ",
             "D": " Interview a sampling of users to obtain the usage data    "
         },
         "answer": "B",
@@ -2611,7 +2615,7 @@
         "options": {
             "A": " Defined the skill requirements more clearly in the scope statement.  ",
             "B": " Asked the manager to follow the agreed-upon resource management plan.  ",
-            "C": "  Conducted periodic reviews with the manager on resource availability.  ",
+            "C": " Conducted periodic reviews with the manager on resource availability.  ",
             "D": " Consulted with the installation team on a regular basis to check for conflicts.    "
         },
         "answer": "C",
@@ -2715,7 +2719,7 @@
         "questionImage": null,
         "options": {
             "A": " Work with the stakeholders to create a prioritized backlog and release a roadmap.  ",
-            "B": "  Modify the requirements to those that can be completed in 6 months.  ",
+            "B": " Modify the requirements to those that can be completed in 6 months.  ",
             "C": " Implement fast-tracking and crashing activities to complete the project in 6 months.  ",
             "D": " Include all stakeholders in daily scrum meetings to keep them informed.    "
         },
@@ -2867,7 +2871,7 @@
             "A": " Provide the team with support to solve their own problems.  ",
             "B": " Inform the project sponsor and train the entire team.  ",
             "C": " Ask the human resources (HR) department to conduct performance training.  ",
-            "D": "  Ask the functional department manager to replace the team members.    "
+            "D": " Ask the functional department manager to replace the team members.    "
         },
         "answer": "A",
         "answerImage": null,
@@ -2912,7 +2916,8 @@
             "A": " Contact the customers in batches and inform them that the issues are being worked on currently.  ",
             "B": " Confirm the issues truly exist by conducting a survey and other analyses that may detect the real issue.  ",
             "C": " Deploy solutions that will track, prioritize, and resolve queries as soon as possible.  ",
-            "D": " Ask senior management to replace the customer service manager with a more qualified one.  E. Request that the customer service team prioritizes work on queries that are received this week.    "
+            "D": " Ask senior management to replace the customer service manager with a more qualified one. ",
+            "E": " Request that the customer service team prioritizes work on queries that are received this week.    "
         },
         "answer": "B,C",
         "answerImage": null,
@@ -3662,7 +3667,7 @@
             "A": " Advise the CTO about the possible impacts caused by the project.  ",
             "B": " Influence the product owner to review the engagement needed from other stakeholders.  ",
             "C": " Continue building the backlog since they are functional requirements.  ",
-            "D": "  Review the organizational process assets (OPAs) for historical information from similar projects.    "
+            "D": " Review the organizational process assets (OPAs) for historical information from similar projects.    "
         },
         "answer": "B",
         "answerImage": null,
@@ -3692,7 +3697,8 @@
             "A": " Encourage team members to cross-check decisions with the project manager.   ",
             "B": " Vet all of the decisions before execution.  ",
             "C": " Allow team members to make limited decisions.  ",
-            "D": " Organize and assign team members to tasks where they have strengths.  E. Support team members to make decisions in their areas of strength.    "
+            "D": " Organize and assign team members to tasks where they have strengths. ",
+            "E": " Support team members to make decisions in their areas of strength.    "
         },
         "answer": "D,E",
         "answerImage": null,
@@ -3737,7 +3743,7 @@
             "A": " Use regular screen-sharing sessions to show the progress to the stakeholder.  ",
             "B": " Align and agree with the stakeholder on the communication approach.  ",
             "C": " Ask the manager to use virtual communication tools and online dashboards.  ",
-            "D": "  Create a digital dashboard to meet the manager's information needs.    "
+            "D": " Create a digital dashboard to meet the manager's information needs.    "
         },
         "answer": "B",
         "answerImage": null,
@@ -3839,7 +3845,7 @@
         "question": "257   A new engineer was assigned to a project. Although the engineer has adequate skills for the job, they always wait for authorization from the project manager before acting.   What should the project manager do?       ",
         "questionImage": null,
         "options": {
-            "A": "  Obtain related training for the new team member.  ",
+            "A": " Obtain related training for the new team member.  ",
             "B": " Determine the appropriate level of decision-making authority and empower the engineer.  ",
             "C": " Make all of the decisions for the engineer in order to keep the workflow on track.  ",
             "D": " Replace the resource with an experienced engineer.    "
@@ -3887,7 +3893,7 @@
             "A": " Request additional funding from the sponsor to obtain a new resource to fill in the gap.  ",
             "B": " Inform the customer of the impact immediately and prepare for escalation.  ",
             "C": " Ask the product owner to stretch the delivery team further to complete the final product in the original timeline.  ",
-            "D": "  Perform an impact analysis, readjust the schedule as needed, and communicate the changes to the customer.    "
+            "D": " Perform an impact analysis, readjust the schedule as needed, and communicate the changes to the customer.    "
         },
         "answer": "D",
         "answerImage": null,
@@ -4140,7 +4146,7 @@
         "questionImage": null,
         "options": {
             "A": " Ensure that the schedule is aligned with the vision and objectives.  ",
-            "B": "  Escalate the compliance issue to the project management office (PMO).  ",
+            "B": " Escalate the compliance issue to the project management office (PMO).  ",
             "C": " Congratulate the team and move on to the execution phase.  ",
             "D": " Develop a new detailed schedule with the team and project sponsor.    "
         },
@@ -4727,7 +4733,8 @@
             "A": " Ask the customer for their priorities regarding the requirements for the second milestone.  ",
             "B": " Escalate the issue to upper management to resolve the problem, and suggest a plan.  ",
             "C": " Convince the customer to leave the second milestone in place and not change it.  ",
-            "D": " Tell the customer that moving the milestone has a very high impact on the cost of the project.  E. Go back to the development team and discuss which second milestone requirements can be performed in the first quarter.    "
+            "D": " Tell the customer that moving the milestone has a very high impact on the cost of the project. ",
+            "E": " Go back to the development team and discuss which second milestone requirements can be performed in the first quarter.    "
         },
         "answer": "A,C",
         "answerImage": null,
@@ -4846,7 +4853,7 @@
         "options": {
             "A": " Assign another senior team member to coach the team member.  ",
             "B": " Address the team member's performance accordingly.  ",
-            "C": "  Empower the team member to make decisions.  ",
+            "C": " Empower the team member to make decisions.  ",
             "D": " Mentor the team member on a regular basis.    "
         },
         "answer": "C",
@@ -4874,7 +4881,7 @@
         "question": "326   A company plans to initiate a project involving a new technology. Approval for the project is required.   What should the project manager do?       ",
         "questionImage": null,
         "options": {
-            "A": "  Review the cost and schedule baselines for execution.  ",
+            "A": " Review the cost and schedule baselines for execution.  ",
             "B": " Define change management for the new technology.  ",
             "C": " Identify the risks in implementing the new technology.  ",
             "D": " Analyze the cost and identify the project benefits.    "
@@ -4951,7 +4958,7 @@
         "options": {
             "A": " Update the communications management plan to remove less influential stakeholders.  ",
             "B": " Delegate all of the stakeholder communications activities to a project team member.  ",
-            "C": "  Segment the types of communications to be delivered to different stakeholders.  ",
+            "C": " Segment the types of communications to be delivered to different stakeholders.  ",
             "D": " Hold biweekly status meetings to deliver information to all stakeholders at once.    "
         },
         "answer": "C",
@@ -5277,7 +5284,8 @@
             "A": " Require a monthly individual status report  ",
             "B": " Hold daily virtual meetings to review progress  ",
             "C": " Utilize a web-based kanban board  ",
-            "D": " Task functional managers to drive accountability  E. Implement time-keeping software for team members    "
+            "D": " Task functional managers to drive accountability ",
+            "E": " Implement time-keeping software for team members    "
         },
         "answer": "D,E",
         "answerImage": null,
@@ -5290,7 +5298,7 @@
         "questionImage": null,
         "options": {
             "A": " Send weekly reports to the PMO, and use a kanban board for the product owner and the project team  ",
-            "B": "  Send the weekly report to the PMO and the product owner, and use a kanban board for the project team  ",
+            "B": " Send the weekly report to the PMO and the product owner, and use a kanban board for the project team  ",
             "C": " Invite the PMO manager to the daily standup with the project team and product owner  ",
             "D": " Send weekly reports to all stakeholders, including the project team and the product owner    "
         },
@@ -5330,7 +5338,7 @@
         "questionImage": null,
         "options": {
             "A": " Set up a meeting with the sponsor to explain the importance of keeping a strict sprint cycle.  ",
-            "B": "  Decrease the sprint cycle to the average reprioritization request by calculating it in days.  ",
+            "B": " Decrease the sprint cycle to the average reprioritization request by calculating it in days.  ",
             "C": " Set up a meeting with the project team and ask for their opinion on what to do.  ",
             "D": " Move to a Kanban strategy so that work can be reallocated more easily.    "
         },
@@ -5347,7 +5355,8 @@
             "A": " Create a work breakdown structure (WBS) of the new scope with the internal projects.  ",
             "B": " Create a change request with the scope of the new internal projects.  ",
             "C": " Use the project's contingency budget.  ",
-            "D": " Influence the client to initiate a new project.  E. Manage the quality of the delivery.    "
+            "D": " Influence the client to initiate a new project. ",
+            "E": " Manage the quality of the delivery.    "
         },
         "answer": "A,D,E",
         "answerImage": null,
@@ -5392,7 +5401,8 @@
             "A": " Meet with management to discuss dividing the project into smaller projects.  ",
             "B": " Convince senior management to hire third-party staff.  ",
             "C": " Enhance the competencies of the project team through training, mentoring, and coaching.  ",
-            "D": " Increase the trained staff to create back-up for resources.  E. Introduce a recognition program to motivate and reward resource performance.    "
+            "D": " Increase the trained staff to create back-up for resources. ",
+            "E": " Introduce a recognition program to motivate and reward resource performance.    "
         },
         "answer": "C,E",
         "answerImage": null,
@@ -5467,7 +5477,8 @@
             "A": " Send a questionnaire to the project participants and seek their feedback.  ",
             "B": " Refer to the communications management plan.  ",
             "C": " Obtain official approval on the new process from the various countries.  ",
-            "D": " Prepare the lessons learned from the project phase.  E. Deliver the project materials to the users and see if they have any comments.    "
+            "D": " Prepare the lessons learned from the project phase. ",
+            "E": " Deliver the project materials to the users and see if they have any comments.    "
         },
         "answer": "A,B",
         "answerImage": null,
@@ -5526,7 +5537,7 @@
         "options": {
             "A": " Request more funding from the project sponsor to hire additional skilled resources and to incorporate additional quality in the project delivery approach and outcome.  ",
             "B": " Review the project objectives with the project sponsor to agree on more realistic and achievable project plans and deliverables.  ",
-            "C": "  Create a business case after performing a market review, and then submit it to the sponsor to modify the project deliverable to meet the newly defined objectives.  ",
+            "C": " Create a business case after performing a market review, and then submit it to the sponsor to modify the project deliverable to meet the newly defined objectives.  ",
             "D": " Conduct periodical reviews of the project plans, objectives, and deliverables to ensure all relevant data are captured to continue making informed project decisions.    "
         },
         "answer": "D",
@@ -5630,9 +5641,10 @@
         "questionImage": null,
         "options": {
             "A": " Story testing  ",
-            "B": "  Tests based on behavior and test-driven development  ",
+            "B": " Tests based on behavior and test-driven development  ",
             "C": " Independent personal testing  ",
-            "D": " Security and performance testing  E. An experimental approach to cover all possible choices    "
+            "D": " Security and performance testing ",
+            "E": " An experimental approach to cover all possible choices    "
         },
         "answer": "A,B,C",
         "answerImage": null,
@@ -5809,7 +5821,7 @@
         "question": "389   An agile project team is looking to develop quality standards for a project.   How should the project manager coach the team?       ",
         "questionImage": null,
         "options": {
-            "A": "  Determine the tools and techniques suitable for the project and ensure that testing is done early and continuously.  ",
+            "A": " Determine the tools and techniques suitable for the project and ensure that testing is done early and continuously.  ",
             "B": " Ensure that the definition of done (DoD) is provided when the product owner agrees that all acceptance criteria have been met for the user story.  ",
             "C": " Insist that test-driven development is implemented along with the automated testing.  ",
             "D": " Inform the team that user acceptance testing is required to ensure that the product owner accepts the solution.    "
@@ -5857,7 +5869,7 @@
             "A": " Update the risk register and project log, and manage the budget closely.  ",
             "B": " Revise the project scope accordingly to cope with the budget changes.  ",
             "C": " Submit a change request to accelerate the project as requested.  ",
-            "D": "  Ask upper management for more funds, and update the project budget.    "
+            "D": " Ask upper management for more funds, and update the project budget.    "
         },
         "answer": "C",
         "answerImage": null,
@@ -5897,7 +5909,8 @@
             "A": " Company mission and vision  ",
             "B": " Sprint goal  ",
             "C": " Sprint charter  ",
-            "D": " Product backlog  E. Burndown chart    "
+            "D": " Product backlog ",
+            "E": " Burndown chart    "
         },
         "answer": "B,D",
         "answerImage": null,
@@ -6002,7 +6015,7 @@
             "A": " The WBS dictionary  ",
             "B": " The requirements traceability matrix  ",
             "C": " The project charter and scope statement  ",
-            "D": "  The business requirement documents (BRD)    "
+            "D": " The business requirement documents (BRD)    "
         },
         "answer": "A",
         "answerImage": null,
@@ -6137,7 +6150,8 @@
             "A": " Ask the product owner to include the requirements in the product backlog.  ",
             "B": " Ask the security department for details about regulations.  ",
             "C": " Ask the stakeholders about the priority of this regulation.  ",
-            "D": " Ask the team members to include the requirements in the next iteration.  E. Ask the team members to analyze the impact of including this regulation.    "
+            "D": " Ask the team members to include the requirements in the next iteration. ",
+            "E": " Ask the team members to analyze the impact of including this regulation.    "
         },
         "answer": "B,E",
         "answerImage": null,
@@ -6182,7 +6196,8 @@
             "A": " Conduct a stakeholder analysis  ",
             "B": " Reinforce team communication.   ",
             "C": " Update the project management plan with the new timeline  ",
-            "D": " Adopt an incremental approach  E. Leverage work between team members    "
+            "D": " Adopt an incremental approach ",
+            "E": " Leverage work between team members    "
         },
         "answer": "A,D",
         "answerImage": null,
@@ -6256,7 +6271,7 @@
         "options": {
             "A": " Develop a work plan for the project team member with the help of the resource manager  ",
             "B": " Advise the functional manager and the project team member to review the resource management plan  ",
-            "C": "  Tell the functional manager and the project team member to review the project charter  ",
+            "C": " Tell the functional manager and the project team member to review the project charter  ",
             "D": " Ask the functional manager to create a specific responsible, accountable, consult, and inform (RACI) chart for the team member    "
         },
         "answer": "B",
@@ -6407,7 +6422,7 @@
             "A": " Plan for overtime, apply crashing and fast tracking, and share the risk of failure with project stakeholders  ",
             "B": " Review the project backlog looking for high-priority items and come up with a minimum viable product (MVP) that fits the expected timeline  ",
             "C": " Seek approval with the sponsor to triple the project budget, hiring more people to compensate for the compressed schedule  ",
-            "D": "  Go over the critical path with stakeholders, explaining why it is not possible to deliver all the scope in the expected timeline    "
+            "D": " Go over the critical path with stakeholders, explaining why it is not possible to deliver all the scope in the expected timeline    "
         },
         "answer": "B",
         "answerImage": null,
@@ -6434,7 +6449,7 @@
         "question": "431   The product owner decides to launch a product after a couple of releases, knowing that the minimum viable product (MVP) lacks some features. One of the key stakeholders, the marketing vice president, is not happy with the results and questioned the release decision.   What should the project manager do?       ",
         "questionImage": null,
         "options": {
-            "A": "  Support the product owner’s decision and seek better alignment with this stakeholder in order to avoid this type of issue in the future  ",
+            "A": " Support the product owner’s decision and seek better alignment with this stakeholder in order to avoid this type of issue in the future  ",
             "B": " Coach the team on the decision-making process, assuming a risk-averse strategy towards product releasing  ",
             "C": " Assume the responsibility for product releases, making the final call on when something is ready for customer launch  ",
             "D": " Escalate the issue to the sponsor, questioning the authority of the key stakeholder regarding the product launch decision    "
@@ -6482,7 +6497,7 @@
             "A": " Make a change request regarding the project’s scope to ensure compliance  ",
             "B": " Include an assessment to verify compliance in the next iteration  ",
             "C": " Conduct an iteration review to address the new regulation  ",
-            "D": "  Start the tests over, adapting the trials to the new regulation    "
+            "D": " Start the tests over, adapting the trials to the new regulation    "
         },
         "answer": "C",
         "answerImage": null,
@@ -6585,7 +6600,7 @@
         "questionImage": null,
         "options": {
             "A": " The project sprint board has not been updated  ",
-            "B": "  Daily standup meetings were not held or enforced  ",
+            "B": " Daily standup meetings were not held or enforced  ",
             "C": " The project status dashboard has not been updated  ",
             "D": " The communications management plan has not been developed    "
         },
@@ -6617,7 +6632,8 @@
             "A": " A lot of discussions that yield no results or possibly too many results  ",
             "B": " A lack of direction and motivation for the team in the workshop  ",
             "C": " Lessons learned from other teams to not be considered  ",
-            "D": " Time management plan for the retrospective workshop to not be updated  E. A focus on the negative and a disinterest in further improvements    "
+            "D": " Time management plan for the retrospective workshop to not be updated ",
+            "E": " A focus on the negative and a disinterest in further improvements    "
         },
         "answer": "A,C",
         "answerImage": null,
@@ -6780,7 +6796,7 @@
         "questionImage": null,
         "options": {
             "A": " Register starting the project without a quality management plan as a risk, and allocate the budget savings to the management reserve  ",
-            "B": "  Develop the quality management plan, as quality is as equally important as cost and schedule management  ",
+            "B": " Develop the quality management plan, as quality is as equally important as cost and schedule management  ",
             "C": " Get confirmation from management that the team member has enough experience to build software without quality control  ",
             "D": " Ask the customer to order an external quality audit after accepting the project deliverable, and decrease the budget of the project    "
         },
@@ -7142,7 +7158,7 @@
             "A": " Add the competitor's functionalities to the product backlog to improve the product  ",
             "B": " Ask the sponsor to add more people to the team  ",
             "C": " Help the team to find a new approach to launch the product as soon as possible  ",
-            "D": "  Ask the team to increase the velocity to launch the product as soon as possible    "
+            "D": " Ask the team to increase the velocity to launch the product as soon as possible    "
         },
         "answer": "C",
         "answerImage": null,
@@ -7217,7 +7233,8 @@
             "A": " Encourage all team members to use a virtual workspace  ",
             "B": " Ask the team to send emails with detailed task progress  ",
             "C": " Talk to the team member about their engagement and take appropriate action.  ",
-            "D": " Reassign the work to a resource who participates in the daily calls  E. Report the team member’s poor performance to the functional manager    "
+            "D": " Reassign the work to a resource who participates in the daily calls ",
+            "E": " Report the team member’s poor performance to the functional manager    "
         },
         "answer": "C,E",
         "answerImage": null,
@@ -7277,7 +7294,8 @@
             "A": " Discuss with the construction team alternatives on moving the new train station to another location  ",
             "B": " Publish information on the city’s website about the benefits that the new tram station will bring  ",
             "C": " Have a meeting with the mayor and explain the importance of the new train station to the city  ",
-            "D": " Conduct regular meetings with the neighbors to get their buy-in for the project  E. Register this situation as a risk and develop a mitigation plan    "
+            "D": " Conduct regular meetings with the neighbors to get their buy-in for the project ",
+            "E": " Register this situation as a risk and develop a mitigation plan    "
         },
         "answer": "B,D",
         "answerImage": null,
@@ -7292,7 +7310,8 @@
             "A": " Recruit the best resources within the organization to be part of the virtual team  ",
             "B": " Evaluate the project manager’s own strengths and weaknesses as a virtual team leader to identify avoidable pitfalls  ",
             "C": " Identify the types and quantities of resources required for each work package or activity  ",
-            "D": " Establish in the beginning, how progress will be monitored and the best means for communicating progress  E. Verify if team members are on more than one team and cannot devote enough time to this team    "
+            "D": " Establish in the beginning, how progress will be monitored and the best means for communicating progress ",
+            "E": " Verify if team members are on more than one team and cannot devote enough time to this team    "
         },
         "answer": "D,E",
         "answerImage": null,
@@ -7349,7 +7368,7 @@
         "question": "492   During project execution, the project manager discovered that a key deliverable was missing from the scope of work. After investigation, the project manager and the team discovered that the missing deliverable will impact the critical path.   What should the project manager do to avoid future delays?       ",
         "questionImage": null,
         "options": {
-            "A": "  Submit a change request.  ",
+            "A": " Submit a change request.  ",
             "B": " Add additional resources to the project  ",
             "C": " Update the scope of work  ",
             "D": " Review the risk management plan    "

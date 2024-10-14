@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../css/MCQQuestion.css';
 import ImageComponent from './ImageContainer';
 import OptionComponent from './OptionComponent';
+import { StringLiteral } from 'typescript';
 
 interface MCQQuestionProps {
   mcq: {
@@ -13,6 +14,8 @@ interface MCQQuestionProps {
       B?: string;
       C?: string;
       D?: string;
+      E?: string;
+      F?: string;
     };
     answer: string;
     answerImage?: string;
@@ -94,6 +97,26 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect, sel
             index="D"
             onSelect={toggleOption}
             isChecked={localSelectedOptions.includes("D")}
+            type={isMultipleAnswer ? "checkbox" : "radio"}
+          />
+        )}
+        {mcq.options.E && (
+          <OptionComponent
+            answer={mcq.answer}
+            option={mcq.options.E}
+            index="E"
+            onSelect={toggleOption}
+            isChecked={localSelectedOptions.includes("E")}
+            type={isMultipleAnswer ? "checkbox" : "radio"}
+          />
+        )}
+        {mcq.options.F && (
+          <OptionComponent
+            answer={mcq.answer}
+            option={mcq.options.F}
+            index="F"
+            onSelect={toggleOption}
+            isChecked={localSelectedOptions.includes("F")}
             type={isMultipleAnswer ? "checkbox" : "radio"}
           />
         )}
