@@ -26,7 +26,7 @@ interface MCQQuestionProps {
 
 const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect, selectedOptions }) => {
   const [localSelectedOptions, setLocalSelectedOptions] = useState<string[]>(selectedOptions);
-  const [showAnswer, setShowAnswer] = useState(false);
+  // const [showAnswer, setShowAnswer] = useState(false);
 
   useEffect(() => {
     setLocalSelectedOptions(selectedOptions);
@@ -45,9 +45,9 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect, sel
     });
   };
 
-  const toggleShowAnswer = () => {
-    setShowAnswer(!showAnswer);
-  };
+  // const toggleShowAnswer = () => {
+  //   setShowAnswer(!showAnswer);
+  // };
 
   const isMultipleAnswer = mcq.answer.includes(',');
 
@@ -98,17 +98,17 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({ mcq, onSelect, isCorrect, sel
           />
         )}
       </div>
-      {showAnswer && (
+      {/* {showAnswer && (
         <div className="answer-section">
           <p><strong>Answer:</strong> {mcq.answer}</p>
           {mcq.answerImage && <ImageComponent src={require(`../../images/${mcq.answerImage}.png`)} />}
           {mcq.explanation && <p>{mcq.explanation}</p>}
           {mcq.explanationImage && <ImageComponent src={require(`../../images/${mcq.explanationImage}.png`)} />}
         </div>
-      )}
-      <button onClick={toggleShowAnswer} className="show-answer-btn">
+      )} */}
+      {/* <button onClick={toggleShowAnswer} className="show-answer-btn">
         {showAnswer ? 'Hide Answer' : 'Show Answer'}
-      </button>
+      </button> */}
     </div>
   );
 };
