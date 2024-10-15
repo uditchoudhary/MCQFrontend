@@ -19,7 +19,7 @@ const TestComponent: React.FC<TestComponentProps> = ({
   const [breakTime, setBreakTime] = useState(false);
 
   const calculateTime = useCallback((numQuestions: number) => {
-    const time = numQuestions === 180 ? 2 : Math.round((numQuestions / 180) * 230);
+    const time = numQuestions === 180 ? 230 : Math.round((numQuestions / 180) * 230);
     return time * 60; // Convert minutes to seconds
   }, []);
 
@@ -102,7 +102,7 @@ const TestComponent: React.FC<TestComponentProps> = ({
         <button onClick={handleBreak} className="break-button">Take a Break</button>
       )}
       {showSummary && results[currentTest] && (
-        <>
+        <div className='summary'>
           <h2>Summary of Answers</h2>
           <div>
             {results[currentTest].map((result: any, index: any) => (
@@ -117,7 +117,7 @@ const TestComponent: React.FC<TestComponentProps> = ({
               (currentTest + 1) * QUESTIONS_PER_TEST
             ).length}</p>
           </div>
-        </>
+        </div>
       )}
       {breakTime && (
         <div>
