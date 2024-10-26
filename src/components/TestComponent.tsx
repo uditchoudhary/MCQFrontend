@@ -1,7 +1,50 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import MCQQuestion from './MCQQuestion';
 import Timer from './Timer'; // Import the Timer component
 import { useSelection } from './../context/SelectionContext';
+
+// Timer styles (default and fixed)
+const timerStyles: React.CSSProperties = {
+  width: '100%',
+  backgroundColor: '#f8f9fa',
+  padding: '10px 0',
+  textAlign: 'center',
+};
+
+const fixedTimerStyles: React.CSSProperties = {
+  ...timerStyles,
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  // right: 0,
+  margin: '0 auto',
+  width: '20%', // Keeps the timer width at 20%
+  zIndex: 1000,
+  height: '15%',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+};
+
+// Modal styles
+const modalStyles: React.CSSProperties = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
+
+const popupContentStyles: React.CSSProperties = {
+  backgroundColor: '#fff',
+  padding: '20px',
+  borderRadius: '8px',
+  textAlign: 'center',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+};
+
 
 interface TestComponentProps {
   currentTest: number;
@@ -17,6 +60,70 @@ const TestComponent: React.FC<TestComponentProps> = ({
   const { userSelections, setUserSelections, results, setResults, markTestAsSubmitted } = useSelection();
   const [showSummary, setShowSummary] = useState(false);
   const [breakTime, setBreakTime] = useState(false);
+
+  // Time variables 
+  const [time, setTime] = useState(0); // Time in seconds
+  const [isRunning, setIsRunning] = useState(false);
+  const [showPausePopup, setShowPausePopup] = useState(false);
+  const [isFixed, setIsFixed] = useState(false); // New state to control fixed positioning
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (isRunning) {
+      timerRef.current = setInterval(() => {
+        setTime(prevTime => prevTime + 1);
+      }, 1000);
+    } else if (!isRunning && timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [isRunning]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (timerContainerRef.current) {
+        const offsetTop = timerContainerRef.current.offsetTop;
+        if (window.scrollY > offsetTop) {
+          setIsFixed(true);
+        } else {
+          setIsFixed(false);
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const formatTime = (time: number) => {
+    const hours = String(Math.floor(time / 3600)).padStart(2, '0');
+    const minutes = String(Math.floor((time % 3600) / 60)).padStart(2, '0');
+    const seconds = String(time % 60).padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
+  };
+
+  const handleStartPause = () => {
+    if (isRunning) {
+      setShowPausePopup(true);
+      setIsRunning(false)
+    } else {
+      setIsRunning(true);
+      setShowPausePopup(false);
+    }
+  };
+
+  const handleResumeTimer = () => {
+    setIsRunning(true);
+    setShowPausePopup(false);
+  };
+
+  const handleReset = () => {
+    setIsRunning(false);
+    setTime(0);
+    setShowPausePopup(false);
+  };
 
   const calculateTime = useCallback((numQuestions: number) => {
     const time = numQuestions === 180 ? 230 : Math.round((numQuestions / 180) * 230);
@@ -83,7 +190,27 @@ const TestComponent: React.FC<TestComponentProps> = ({
 
   return (
     <div>
-      {!breakTime && <Timer initialTime={initialTime} onTimeUp={handleTimeUp} />}
+      {/* {!breakTime && <Timer initialTime={initialTime} onTimeUp={handleTimeUp} />} */}
+      <div>
+      <div
+        ref={timerContainerRef}
+        style={isFixed ? fixedTimerStyles : timerStyles} // Apply fixed styles only when isFixed is true
+      >
+        <h2>{formatTime(time)}</h2>
+        <button onClick={handleStartPause}>{isRunning ? 'Pause' : 'Start'}</button>
+        <button onClick={handleReset}>Reset</button>
+      </div>
+
+      {/* Pause Popup Modal */}
+      {showPausePopup && (
+        <div style={modalStyles}>
+          <div style={popupContentStyles}>
+            <p>Test is paused. Click on Resume to continue.</p>
+            <button onClick={handleResumeTimer}>Resume</button>
+          </div>
+        </div>
+      )}
+    </div>
       <div className="question-list">
         {questions.slice(
           currentTest * QUESTIONS_PER_TEST,
