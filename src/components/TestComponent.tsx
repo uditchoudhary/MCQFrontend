@@ -45,6 +45,20 @@ const popupContentStyles: React.CSSProperties = {
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
 };
 
+// Scroll to Top Button styles
+const scrollButtonStyles: React.CSSProperties = {
+  position: 'fixed',
+  bottom: '20px',
+  right: '20px',
+  padding: '10px',
+  // backgroundColor: '#007bff',
+  // color: '#fff',
+  // border: 'none',
+  // borderRadius: '50%',
+  cursor: 'pointer',
+  fontSize: '16px',
+  zIndex: 1000,
+};
 
 interface TestComponentProps {
   currentTest: number;
@@ -59,7 +73,7 @@ const TestComponent: React.FC<TestComponentProps> = ({
 }) => {
   const { userSelections, setUserSelections, results, setResults, markTestAsSubmitted } = useSelection();
   const [showSummary, setShowSummary] = useState(false);
-  const [breakTime, setBreakTime] = useState(false);
+  // const [breakTime, setBreakTime] = useState(false);
 
   // Time variables 
   const [time, setTime] = useState(0); // Time in seconds
@@ -135,19 +149,19 @@ const TestComponent: React.FC<TestComponentProps> = ({
     (currentTest + 1) * QUESTIONS_PER_TEST
   ).length;
 
-  const initialTime = useMemo(() => calculateTime(numQuestions), [calculateTime, numQuestions]);
+  // const initialTime = useMemo(() => calculateTime(numQuestions), [calculateTime, numQuestions]);
 
-  const handleTimeUp = () => {
-    handleSubmit();
-  };
+  // const handleTimeUp = () => {
+  //   handleSubmit();
+  // };
 
-  const handleBreak = () => {
-    setBreakTime(true);
-  };
+  // const handleBreak = () => {
+  //   setBreakTime(true);
+  // };
 
-  const handleResume = () => {
-    setBreakTime(false);
-  };
+  // const handleResume = () => {
+  //   setBreakTime(false);
+  // };
 
   const toggleOption = (questionIndex: number, options: string[]) => {
     setUserSelections((prev) => ({
@@ -157,6 +171,10 @@ const TestComponent: React.FC<TestComponentProps> = ({
         [`Q${questionIndex + 1}`]: options,
       },
     }));
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSubmit = () => {
@@ -225,9 +243,9 @@ const TestComponent: React.FC<TestComponentProps> = ({
         ))}
       </div>
       <button onClick={handleSubmit} className="submit-button">Submit Answers</button>
-      {Object.keys(userSelections[currentTest] || {}).length > 60 && !breakTime && (
+      {/* {Object.keys(userSelections[currentTest] || {}).length > 60 && !breakTime && (
         <button onClick={handleBreak} className="break-button">Take a Break</button>
-      )}
+      )} */}
       {showSummary && results[currentTest] && (
         <div className='summary'>
           <h2>Summary of Answers</h2>
@@ -246,13 +264,17 @@ const TestComponent: React.FC<TestComponentProps> = ({
           </div>
         </div>
       )}
-      {breakTime && (
+      {/* {breakTime && (
         <div>
           <p>Take a 10-minute break. Timer will resume after the break.</p>
           <Timer initialTime={600} onTimeUp={handleResume} />
           <button onClick={handleResume}>Resume Test</button>
         </div>
-      )}
+      )} */}
+            {/* Scroll to Top Button */}
+            <button onClick={scrollToTop} style={scrollButtonStyles}>
+        ⬆️ Top
+      </button>
     </div>
   );
 };
